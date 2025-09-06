@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nike-Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+    @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+    body {
+      background-color: rgb(254, 254, 254);
+      height: 2000px;
+      font-family: "Poppins";
+    }
+    .checked {
+      color: red;
+    }
+  </style>
+  <body>
+    <!--This is an navbar section for different sections-->
+    <div
+      class="navbar-container flex items-center justify-between p-3 bg-gray-100 sticky top-0 shadow shadow-xl z-10"
+    >
+      <div class="navbar-left flex items-center">
+        <div class="logo">
+          <img
+            class="w-[60px] mix-blend-darken"
+            src="/data/images/nike-logo-img.jpg"
+            alt=""
+          />
+        </div>
+        <div class="name text-orange-500 font-bold text-[16px]">Nike</div>
+      </div>
+
+      <div class="navbar-middle hidden sm:block lg:block">
+        <ul class="flex items-center">
+          <li
+            class="hover:bg-gray-300 p-1 rounded-[5px] hover:shadow-2xl hover:cursor-pointer transition-all ease-in-out duration-300 mr-[40px]"
+          >
+            Home
+          </li>
+          <li
+            class="hover:bg-gray-300 p-1 rounded-[5px] hover:shadow-2xl hover:cursor-pointer transition-all ease-in-out duration-300 mr-[50px]"
+          >
+            About Us
+          </li>
+          <li
+            class="hover:bg-gray-300 p-1 rounded-[5px] hover:shadow-2xl hover:cursor-pointer transition-all ease-in-out duration-300 mr-[50px]"
+          >
+            Products
+          </li>
+          <li
+            class="hover:bg-gray-300 p-1 rounded-[5px] hover:shadow-2xl hover:cursor-pointer transition-all ease-in-out duration-300 mr-[50px]"
+          >
+            Contact
+          </li>
+        </ul>
+      </div>
+
+      <div class="navbar-right">
+        <button
+          class="bg-gray-400 p-2 rounded-[10px] hover:shadow-xl hover:cursor-pointer transition-all ease0in-out duration-300 hover:bg-gray-300"
+        >
+          Dark Mode
+        </button>
+      </div>
+    </div>
+
+    <!--This is an banner container-->
+
+    <div
+      class="banner-section grid grid-cols-1 md:grid-cols-1 gap-[50px] lg:grid-cols-1 xl:grid-cols-2 sm:text-[10px] place-content-center place-items-center my-[50px] p-5"
+    >
+      <div
+        class="banner-section-data grid grid-cols-1 gap-3 w-[500px] md:mr-[-100px]"
+      >
+        <p
+          class="text-orange-400 text-[15px] my-[-5px] text-center md:text-left lg:text-left xl:text-left 2xl:text-left"
+        >
+          Our Summer Collections
+        </p>
+        <h1
+          class="text-xl text-center sm:text-[55px] font-bold mt-[0px] leading-[65px] md:text-left"
+        >
+          The New Arrival <span class="text-orange-500">Nike</span> Shoes
+        </h1>
+        <p
+          class="text-[12px] text-center w-[250px] ml-auto mr-auto md:text-center md:ml-[0px] md:mr-[0px]"
+        >
+          Discover Stylish Nike arrivals, quality, comfort, innovation for your
+          active life
+        </p>
+        <button
+          class="text-center ml-auto mr-auto md:mr-[0px] md:ml-[0px] bg-orange-500 w-[120px] rounded-3xl text-center p-1 text-white shadow hover:shadow-xl transition ease-in-out duration-300 hover:bg-orange-600"
+        >
+          Shop now
+          <span class="">&rarr;</span>
+        </button>
+
+        <div
+          class="promotions-container grid grid-cols-3 place-content-center font-bold text-[22px] gap-1 mt-[40px] w-[300px] ml-auto mr-auto"
+        >
+          <div class="1k">
+            1k+
+            <p class="text-[10px] text-gray-600">Brands</p>
+          </div>
+
+          <div class="500k">
+            500k+
+            <p class="text-[10px] text-gray-600">Shoes</p>
+          </div>
+          <div class="250k">
+            250k+
+            <p class="text-[10px] text-gray-600">Customers</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="banner-section-images">
+        <div class="main-image relative">
+          <img
+            class="mix-blend-darken w-[300px] sm:w-[400px] md:w-[400px] rounded-xl mt-[10px] ml-auto mr-auto"
+            src="/NikeWebsite/data/images/new-image - Copy (2).png"
+            alt=""
+          />
+          <div
+            class="sub-main-image w-[250px] sm:w-[350px] grid grid-cols-3 place-content-center place-items-center"
+          >
+            <div class="image-one">
+              <img
+                class="absolute bottom-[-20px] w-[60px] sm:w-[80px] rounded-xl shadow hover:shadow-2xl hover:cursor-pointer"
+                src="/NikeWebsite/data/images/nike-shoe-5.png"
+                alt=""
+              />
+            </div>
+            <div class="image-one">
+              <img
+                class="absolute bottom-[-20px] w-[60px] sm:w-[80px] rounded-xl shadow hover:shadow-2xl hover:cursor-pointer transition-all ease-in-out duration-300"
+                src="/NikeWebsite/data/images/new-img1.png"
+                alt=""
+              />
+            </div>
+            <div class="image-one">
+              <img
+                class="absolute bottom-[-20px] w-[60px] rounded-xl sm:w-[80px] shadow hover:shadow-2xl hover:cursor-pointer transition-all ease-in-out duration-300"
+                src="/NikeWebsite/data/images/new-img2.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--This is an products list container-->
+
+    <div class="our-products-heading text-center sm:ml-[200px]">
+      <h1 class="text-2xl sm:w-[400px] sm:text-3xl sm:font-bold text-center">
+        Our <span class="text-orange-400">Popular</span> Products
+      </h1>
+      <p
+        class="w-[350px] ml-[20px] text-center sm:text-left text-[13px] mt-[10px]"
+      >
+        Experience top notch quanlity and style with our sought after
+        selections. Discover a world of comfort, design and value
+      </p>
+    </div>
+
+    <div
+      class="products-grid-container grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 md:w-[600px] lg:grid-cols-3 lg:w-[1200px] xl:grid-cols-4 place-content-center place-items-center gap-[40px] ml-auto mr-auto w-[250px] sm:w-[1000px] transition ease-in-out duration-300"
+    >
+      <div class="product-details-container text-[12px] mt-[50px]">
+        <div class="product-image">
+          <img
+            class="w-[300px] lg:w-[170px] xl:w-[170px] rounded-[10px] shadow-md hover:shadow-xl hover:cursor-pointer"
+            src="/NikeWebsite/images/new-img3.png"
+            alt=""
+          />
+        </div>
+        <div class="star-ratings">
+          <p>
+            <span class="fa fa-star checked mt-[10px] mr-[3px]"></span>(4.5)
+          </p>
+        </div>
+        <div class="product-name">
+          <p class="font-bold mt-[4px] mb-[4px]">Nike Air Jordan - 01</p>
+        </div>
+
+        <div class="price">
+          <p class="text-red-700 font-bold">$200.20</p>
+        </div>
+      </div>
+      <div class="product-details-container text-[12px] mt-[50px]">
+        <div class="product-image">
+          <img
+            class="w-[300px] lg:w-[170px] xl:w-[170px] rounded-[10px] shadow-md hover:shadow-xl hover:cursor-pointer transition-all ease-in-out duration-300"
+            src="/NikeWebsite/images/new-img3.png"
+            alt=""
+          />
+        </div>
+        <div class="star-ratings">
+          <p>
+            <span class="fa fa-star checked mt-[10px] mr-[3px]"></span>(4.5)
+          </p>
+        </div>
+        <div class="product-name">
+          <p class="font-bold mt-[4px] mb-[4px]">Nike Air Jordan - 01</p>
+        </div>
+
+        <div class="price">
+          <p class="text-red-700 font-bold">$200.20</p>
+        </div>
+      </div>
+      <div class="product-details-container text-[12px] mt-[50px]">
+        <div class="product-image">
+          <img
+            class="w-[300px] lg:w-[170px] xl:w-[170px] rounded-[10px] shadow shadow-md hover:shadow-xl hover:cursor-pointer"
+            src="/NikeWebsite/images/new-img3.png"
+            alt=""
+          />
+        </div>
+        <div class="star-ratings">
+          <p>
+            <span class="fa fa-star checked mt-[10px] mr-[3px]"></span>(4.5)
+          </p>
+        </div>
+        <div class="product-name">
+          <p class="font-bold mt-[4px] mb-[4px]">Nike Air Jordan - 01</p>
+        </div>
+
+        <div class="price">
+          <p class="text-red-700 font-bold">$200.20</p>
+        </div>
+      </div>
+      <div class="product-details-container text-[12px] mt-[50px]">
+        <div class="product-image">
+          <img
+            class="w-[300px] lg:w-[170px] xl:w-[170px] rounded-[10px] shadow-md hover:shadow-xl hover:cursor- transition-all ease-in-out duration-300"
+            src="/NikeWebsite/images/new-img3.png"
+            alt=""
+          />
+        </div>
+        <div class="star-ratings">
+          <p>
+            <span class="fa fa-star checked mt-[10px] mr-[3px]"></span>(4.5)
+          </p>
+        </div>
+        <div class="product-name">
+          <p class="font-bold mt-[4px] mb-[4px]">Nike Air Jordan - 01</p>
+        </div>
+
+        <div class="price">
+          <p class="text-red-700 font-bold">$200.20</p>
+        </div>
+      </div>
+    </div>
+
+    <!--This is an shoes promotion container-->
+
+    <div
+      class="promotion-container grid grid-cols-1 place-items-center place-content-center my-[150px] sm:grid-cols-1 md:grid-cols-1 gap-[30px] lg:grid-cols-2 xl:grid-cols-2"
+    >
+      <div class="promotion-details w-[300px] sm:w-[450px]">
+        <h1 class="text-[20px] font-bold sm:text-3xl">
+          We Provide You
+          <span class="text-orange-500"> super Quality</span> Shoes
+        </h1>
+        <p class="text-[13px] text-gray-700 my-[15px]">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+          asperiores molestias repudiandae illum atque dicta illo maiores totam
+          mollitia delectus nemo voluptatum similique architecto minus placeat,
+          deserunt esse, hic vel!
+        </p>
+        <p class="text-[13px] text-gray-700 my-[20px]">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
+          neque?
+        </p>
+        <button
+          class="text-left bg-orange-600 w-[120px] rounded-3xl text-center p-2 text-white shadow hover:shadow-xl transition ease-in-out duration-300 hover:bg-orange-600"
+        >
+          Shop now
+          <span class="">&rarr;</span>
+        </button>
+      </div>
+      <div class="promotes-show-image">
+        <img
+          class="w-[250px] sm:w-[400px] rounded-2xl shadow hover:shadow-xl hover:cursor-pointer transition ease-in-out duration-300 mt-[50px] sm:mt-[0px]"
+          src="/NikeWebsite/images/new-img.png"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <!--This is an promotion containers details-->
+
+    <div
+      class="shipping-details-grid grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 place-items-center place-content-center gap-[50px]"
+    >
+      <div
+        class="shipping-details bg-gray-200 p-7 rounded-xl w-[350px] shadow-md transition ease-in-out duration-300 hover:shadow-xl hover:cursor-pointer"
+      >
+        <div class="icon">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/10203/10203722.png"
+            alt="shipping"
+            class="w-[40px]"
+          />
+        </div>
+
+        <div class="type">
+          <h1 class="text-xl font-bold mt-[10px]">Free Shipping</h1>
+        </div>
+        <div class="details text-[12px] text-gray-600 mt-[10px]">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Exercitationem perspiciatis est ullam inventore sed labore.
+        </div>
+      </div>
+      <div
+        class="shipping-details bg-gray-200 p-7 rounded-xl w-[350px] shadow-md transition ease-in-out duration-300 hover:shadow-xl hover:cursor-pointer"
+      >
+        <div class="icon">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/726/726488.png"
+            alt="shipping"
+            class="w-[40px]"
+          />
+        </div>
+
+        <div class="type">
+          <h1 class="text-xl font-bold mt-[10px]">Secure Payment</h1>
+        </div>
+        <div class="details text-[12px] text-gray-600 mt-[10px]">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Exercitationem perspiciatis est ullam inventore sed labore.
+        </div>
+      </div>
+      <div
+        class="shipping-details bg-gray-200 p-7 rounded-xl w-[350px] shadow-md transition ease-in-out duration-300 hover:shadow-xl hover:cursor-pointer"
+      >
+        <div class="icon">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/11496/11496575.png"
+            alt="shipping"
+            class="w-[40px]"
+          />
+        </div>
+
+        <div class="type">
+          <h1 class="text-xl font-bold mt-[10px]">Love to help you</h1>
+        </div>
+        <div class="details text-[12px] text-gray-600 mt-[10px]">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Exercitationem perspiciatis est ullam inventore sed labore.
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="special-offers-container grid grid-cols-1 sm:grid-cols-1 md:place-content-center md:place-items-center md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 place-items-center place-content-center my-[100px]"
+    >
+      <div
+        class="offer-details-images grid grid-cols-2 w-[230px] gap-[10px] hover:bg-gray-300 p-2 hover:cursor-pointer transition-all ease-in-out duration-300 hover:rounded-[20px]"
+      >
+        <div class="image-one">
+          <img
+            class="w-[100px] rounded-[10px] shadow hover:shadow-xl hover:cursor-pointer"
+            src="/NikeWebsite/images/shoes-3.png"
+            alt=""
+          />
+        </div>
+        <div class="image-two">
+          <img
+            class="w-[100px] rounded-[10px] shadow hover:shadow-xl hover:cursor-pointer"
+            src="/NikeWebsite/images/red-leg-shoes.png"
+            alt=""
+          />
+        </div>
+        <div class="image-three col-span-2">
+          <img
+            class="col-span-2 w-[300px] h-[220px] rounded-[10px] shadow hover:shadow-xl hover:cursor-pointer"
+            src="/NikeWebsite/images/new-image.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div
+        class="speacial-offer-details grid grid-cols-1 place-content-center place-items-center w-[300px] sm:w-[500px] text-center sm:text-left mt-[30px]"
+      >
+        <h1 class="text-3xl font-bold">
+          <span class="text-orange-600 sm:text-left">Special</span> Offer
+        </h1>
+        <p class="my-[10px] text-sm text-gray-700">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+          cumque reprehenderit eveniet a nam harum error tenetur veniam labore
+          excepturi.
+        </p>
+        <p class="my-[10px] text-sm text-gray-700">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque,
+          culpa? Ut, voluptas. Possimus eveniet amet, eaque quia veniam debitis
+          eos!
+        </p>
+        <div class="buttons flex items-center sm:items-left sm:justify-left">
+          <button
+            class="bg-orange-600 p-1 rounded-3xl text-white w-[150px] shadow hover:shadow-2xl transition ease-in-out duration-300 mr-[5px] sm:mr-[10px]"
+          >
+            View details
+          </button>
+          <button
+            class="border-2 border-gray-600 p-1 ml-10px rounded-3xl w-[150px] transition ease-in-out duration-300 shadow hover:shadow-2xl hover:bg-gray-300"
+          >
+            Learn more
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-container bg-gray-100 p-10">
+      <div class="review-heading text-center">
+        <h1 class="font-bold text-3xl">
+          What Our <span class="text-orange-600">Customers</span> Say?
+        </h1>
+        <p
+          class="text-[9px] mr-auto ml-auto w-[300px] mt-[10px] sm:w-[300px] md:w-[300px] lg:w-[400px] xl:w-[400px] 2xl:w-[500px] md:text-[12px]"
+        >
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi quam
+          aliquam debitis consequuntur a quasi odio nulla totam dicta ex.
+        </p>
+      </div>
+
+      <div
+        class="customers-review grid grid-cols-1 gap-[40px] place-content-center place-items-center p-5 text-center mt-[30px] bg-gray-100 sm:gris-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2"
+      >
+        <div
+          class="customer-one w-[300px] sm:w-[300px] md:w-[300px] lg:w-[350px] xl:w-[400px] 2xl:w-[400px]"
+        >
+          <div class="customer-icon">
+            <img
+              class="w-[50px] ml-auto mr-auto"
+              src="https://cdn-icons-png.flaticon.com/128/2202/2202112.png"
+              alt=""
+            />
+          </div>
+          <div class="review-description text-[12px] text-gray-700">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            mollitia sequi sit molestias itaque consectetur. Consequatur
+            adipisci molestiae expedita porro?''
+          </div>
+          <div class="ratings">
+            <p>
+              <span class="fa fa-star checked"></span
+              ><span class="text-[13px] text-gray-700">(4.5)</span>
+            </p>
+          </div>
+
+          <div class="name">
+            <h1 class="font-bold">Morich Brown</h1>
+          </div>
+        </div>
+        <div class="customer-one w-[300px]">
+          <div class="customer-icon">
+            <img
+              class="w-[50px] ml-auto mr-auto"
+              src="https://cdn-icons-png.flaticon.com/128/6997/6997662.png"
+              alt=""
+            />
+          </div>
+          <div class="review-description text-[12px] text-gray-700">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            mollitia sequi sit molestias itaque consectetur. Consequatur
+            adipisci molestiae expedita porro?''
+          </div>
+          <div class="ratings">
+            <p>
+              <span class="fa fa-star checked"></span
+              ><span class="text-[13px] text-gray-700">(4.5)</span>
+            </p>
+          </div>
+
+          <div class="name">
+            <h1 class="font-bold">Lota Mongeskar</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="signup-form grid text-center grid-cols-1 gap-[20px] place-content-center place-items-center mt-[50px] sm:gris-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:gris-cols-2 2xl:grid-cols-2"
+    >
+      <div class="signup-details">
+        <h1 class="text-2xl w-[200px] font-bold">
+          Sign Up from <span class="text-orange-600">Updates</span> & Newsletter
+        </h1>
+      </div>
+
+      <div class="email-field relative">
+        <div class="input-email relative">
+          <input
+            class="border-2 border-gray-200 p-2 w-[300px] md:w-[300px] lg:w-[300px] xl:w-[350px] rounded-3xl focus:border-gray-100"
+            type="email"
+            placeholder="Enter Your Email here..."
+          />
+        </div>
+
+        <div class="signup-button">
+          <button
+            class="absolute right-[15px] rounded-2xl bg-orange-400 p-1 w-[100px] bottom-[5.5px] hover:cursor-pointer hover:bg-orange-500 transition-all ease-in-out duration-300 shadow hover:shadow-xl"
+          >
+            Sign Up
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
